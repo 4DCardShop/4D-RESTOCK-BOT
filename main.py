@@ -12,7 +12,7 @@ def check_restock():
         }
         requests.post(WEBHOOK_URL, json=data)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     while True:
         check_restock()
         time.sleep(60)  # Check every 60 seconds
